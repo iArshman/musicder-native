@@ -49,7 +49,7 @@ xmlhttp.onreadystatechange = function() {
                     document.getElementById("lyrics").innerHTML = ldata.lyrics;
                 }
             });
-            xhr.open("GET", "https://songapi.thetuhin.com/lyrics?id=" + songid);
+            xhr.open("GET", "https://jiosaavn-api.vercel.app/lyrics?id=" + songid);
             xhr.send();
         } else {
             document.getElementById('lyricsinit').style.visibility = 'hidden';
@@ -57,7 +57,7 @@ xmlhttp.onreadystatechange = function() {
     };
 };
 //this is the song detail api
-xmlhttp.open("GET", "https://songapi.thetuhin.com/song?id=" + songid, true);
+xmlhttp.open("GET", "https://jiosaavn-api.vercel.app/song?id=" + songid, true);
 xmlhttp.send();
 
 //when lyricsask tapped lyrics will shown (if lyrics available)
